@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadeo's Football Challenge - Edición Cumpleaños 11</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+        
+        <!-- Menú Principal -->
+        <div id="mainMenu" class="menu">
+            <div class="menu-content">
+                <h1 class="title">Tadeo's Football Challenge</h1>
+                <p class="subtitle">Edición Cumpleaños 11</p>
+                <div class="menu-buttons">
+                    <button id="playBtn" class="btn btn-play">Jugar</button>
+                    <button id="creditsBtn" class="btn btn-credits">Créditos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de Créditos -->
+        <div id="creditsScreen" class="menu hidden">
+            <div class="menu-content">
+                <h2>Créditos</h2>
+                <p>Tadeo's Football Challenge</p>
+                <p>Hecho con amor para Tadeo en su cumpleaños número 11.</p>
+                <p>Gracias por jugar este regalo especial.</p>
+                <button id="backBtn" class="btn">Volver</button>
+            </div>
+        </div>
+
+        <!-- HUD del Juego -->
+        <div id="gameHUD" class="hud hidden">
+            <div class="hud-score">
+                <div class="score-box">
+                    <span class="team-name">México</span>
+                    <span id="playerScore" class="score">0</span>
+                </div>
+                <div class="score-divider">vs</div>
+                <div class="score-box">
+                    <span id="rivalName" class="team-name">Rival</span>
+                    <span id="rivalScore" class="score">0</span>
+                </div>
+            </div>
+            <div class="hud-timer">
+                <span id="gameTimer">90</span>s
+            </div>
+            <div class="hud-energy">
+                <div class="energy-bar">
+                    <div id="energyFill" class="energy-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje de Juego -->
+        <div id="gameMessage" class="game-message hidden">
+            <p id="messageText"></p>
+        </div>
+
+        <!-- Pantalla de Victoria -->
+        <div id="victoryScreen" class="menu hidden">
+            <div class="menu-content">
+                <h2>¡¡Felicidades Tadeo!!</h2>
+                <p>¡Has cumplido 11 años!</p>
+                <p>Gracias por jugar este regalo hecho especialmente para ti.</p>
+                <p>Que este nuevo año esté lleno de goles, diversión y grandes aventuras.</p>
+                <div class="celebration">
+                    <span class="confetti">🎉</span>
+                    <span class="confetti">🎊</span>
+                    <span class="confetti">⚽</span>
+                </div>
+                <button id="playAgainBtn" class="btn btn-play">Volver a Jugar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/rival.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
